@@ -733,7 +733,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TZG-Gc-AtC">
-                                <rect key="frame" x="80" y="603" width="240" height="128"/>
+                                <rect key="frame" x="76" y="509" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                             </view>
