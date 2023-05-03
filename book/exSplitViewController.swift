@@ -45,8 +45,12 @@ class exSplitViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        item.roundCorners(corners: [.topLeft , .topRight , .bottomLeft], radius: 30)
-        
+//        item.roundCorners(corners: [.topLeft , .topRight , .bottomLeft], radius: 30)
+        item.layer.borderColor = UIColor.black.cgColor
+        item.layer.borderWidth = 2
+        item.layer.masksToBounds = true
+        item.layer.cornerRadius = 20
+        item.layer.maskedCorners = [.layerMinXMinYCorner , .layerMaxXMinYCorner , .layerMinXMaxYCorner]
         let usersItem = UIAction(title: "Users", image: UIImage(systemName: "person.fill")) { (action) in
 
                 print("Users action was tapped")
@@ -63,13 +67,6 @@ class exSplitViewController: UIViewController {
 
            let menu = UIMenu( options: .displayInline, children: [usersItem , addUserItem , removeUserItem])
 
-//        let plusAction = UIAction(title: "plusAction"){ (action) in
-//            print("Plus Action action was tapped ")
-//        }
-        
-//        let navItems = [UIBarButtonItem(image:  UIImage(systemName: "plus"), primaryAction: plusAction , menu: menu) ,
-//                        .fixedSpace(10),
-//                       UIBarButtonItem(systemItem: .search , menu: menu)]
 
         list.menu = menu
 
